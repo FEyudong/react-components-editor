@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import ExportBtn from "./ExportBtn";
 function Control(){
-    return <div>控制区</div>
+    return <div>
+        <ExportBtn/>
+    </div>
 }
 export default Control;
