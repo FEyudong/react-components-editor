@@ -1,0 +1,49 @@
+.layout{
+  height: 100vh; 
+  .canvas{
+    overflow: auto;
+    height: 100%;
+    .container{
+      border: 1px dashed hsl(180, 82%, 42%);
+      margin: 10vh auto;
+      overflow: auto;
+      background-color: white;
+      position: relative;
+      .block{
+        position: absolute;
+        user-select: none;
+          &::after{
+            content:'';
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+        }
+        &.focus{
+          &::after{
+          border:1px dashed #ff7875 ;  
+        }
+      }
+    }
+    }
+  }
+  .parts{
+    padding: 15px;
+    .part-item{
+      user-select: none;
+      cursor:move;
+      position: relative;
+      &::after{
+        content:'';
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background: #ccc;
+        opacity: 0.1;
+    }
+    }
+  }
+}
