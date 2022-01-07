@@ -9,11 +9,11 @@ import Control from "./components/Control";
 import Setting from "./components/Setting";
 
 import { Layout } from "antd";
-const { Header, Footer, Sider, Content } = Layout;
+const { Header, Sider, Content } = Layout;
 
 function App() {
   // 全局的jsonScheme
-  const [data, setData] = useState(JSONScheme);
+  const [data, setData] = useState<JSONSchemeType>(JSONScheme);
 
   // 当前正在向拖拽的物料组件
   const [curDragComp,setCurDragComp] = useState<CompItemType | null>(null);

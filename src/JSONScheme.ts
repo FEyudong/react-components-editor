@@ -1,5 +1,4 @@
-
-const JSONScheme:JSONSchemeType = {
+export default {
   container: {
     width:600,
     height:600
@@ -10,4 +9,3 @@ const JSONScheme:JSONSchemeType = {
     { top: 300, left: 300, zIndex: 1, key: "input" },
   ],
 }
-export default JSONScheme;

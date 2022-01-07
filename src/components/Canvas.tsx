@@ -38,16 +38,16 @@ function Canvas(props: Props) {
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
       >
-        {data.blocks?.map((item, idx) => (
+        {data.blocks?.map((props, idx) => (
           <Block
             className={classNames({
               block: true,
-              focus: item.isFocus,
+              focus: props.isFocus,
             })}
             onMouseDown={(e) => handleBlockMouseDown(e, idx)}
-            block={item}
+            block={props}
             dataIndex={idx}
-            key={`${item.key}_${item.top}_${item.left}_${idx}`}
+            key={`${props.key}_${props.top}_${props.left}_${idx}`}
           />
         ))}
       </div>
