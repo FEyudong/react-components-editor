@@ -15,7 +15,7 @@ function App() {
   // 全局的jsonScheme
   const [data, setData] = useState<JSONSchemeType>(JSONScheme);
 
-  // 当前正在向拖拽的物料组件
+  // 当前正在拖拽的物料
   const [curDragComp,setCurDragComp] = useState<CompItemType | null>(null);
   
   // 物料区向画布开始拖拽
@@ -40,7 +40,7 @@ function App() {
            />
         </Sider>
         <Layout>
-          {/* 顶部控制栏 */}
+          {/* 顶部功能栏 */}
           <Header style={{backgroundColor:'white'}}>
             <Control />
           </Header>

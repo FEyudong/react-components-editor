@@ -1,16 +1,13 @@
 import React, { useContext,useRef, useState } from "react";
-import {EditorContext} from '../context';
 import {compConfig} from '../config';
 import {Space,Card} from 'antd';
 
 interface Props{
-    handleDragStart:(e:React.DragEvent<HTMLDivElement>,comp:CompItemType)=>void
-    handleDragEnd:(e:React.DragEvent<HTMLDivElement>)=>void
+    handleDragStart:(e:React.DragEvent<HTMLDivElement>,comp:CompItemType)=>void // 开始拖拽
+    handleDragEnd:(e:React.DragEvent<HTMLDivElement>)=>void // 拖拽结束
 }
 function Parts(props:Props){
-    const { handleDragStart,handleDragEnd } = props;
-
-    const {data} = useContext(EditorContext);
+    const { handleDragStart, handleDragEnd } = props;
     return <section className="parts">
         <Space direction="vertical">
         {compConfig.compList.map((comp)=><Card 

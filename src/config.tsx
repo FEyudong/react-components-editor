@@ -1,12 +1,12 @@
 import {Button,Input} from 'antd';
 /**
  * 创建初始化配置
- * @returns 
+ * @returns 组件配置
  */
 function createEditorConfig(){
-    // 物料列表 作用:物料区 渲染物料列表
+    // 物料列表 作用:物料区渲染物料列表
     const compList:CompItemType[] = [];
-    // 物料映射: 物料标识=>物料信息的映射。作用:方便画布区组件渲染
+    // 物料映射: 物料标识=>物料信息的映射。作用:方便画布上通过物料标识找到对应组件进行渲染
     const compMap:{
         [k:string]:CompItemType
     } = {};

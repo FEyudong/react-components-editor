@@ -6,25 +6,33 @@
    * 物料区向画布拖拽添加组件块
    */
   export default (curDragComp:CompItemType | null)=>{
-      const {data,setData} = useContext(EditorContext);;
+    
+      const {data,setData} = useContext(EditorContext);
+
+      // 拖拽目标进入画布
       const handleDragEnter = (e: React.DragEvent<HTMLDivElement>) => {
         if (!curDragComp) {
           return;
         }
-        e.dataTransfer.dropEffect = "move";
+        e.dataTransfer.dropEffect = "move";//改变指针图标
       };
+    
       const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
         if (!curDragComp) {
           return;
         }
         e.preventDefault();
       };
+
+      // 拖拽目标离开画布
       const handleDragLeave = (e: React.DragEvent<HTMLDivElement>) => {
         if (!curDragComp) {
           return;
         }
-        e.dataTransfer.dropEffect = "none";
+        e.dataTransfer.dropEffect = "none";//还原指针图标
       };
+
+      // 在画布上松手时，往画布上添加一个物料
       const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
         if (!curDragComp) {
           return;
