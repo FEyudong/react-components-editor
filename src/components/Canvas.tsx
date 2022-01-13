@@ -16,10 +16,10 @@ function Canvas(props: Props) {
   const { style = {}, curDragComp } = props;
   const { data } = useContext(EditorContext);
 
-  // 物料拖拽功能。向画布添加一个物料
+  // 物料拖拽功能。向画布上添加一个物料
   const { handleDragEnter, handleDragOver, handleDragLeave, handleDrop } = usePartsDrag(curDragComp);
 
-  // 画布元素拖拽功能，支持shfit多选。 调整组件块在画布上的位置，是用mouse相关事件模拟实现的，因为h5原生drag事件不支持同时拖动多个元素
+  // 画布元素拖拽功能，支持长按shfit多选。 调整组件块在画布上的位置，是用mouse相关事件模拟实现的，因为h5原生drag事件不支持同时拖动多个元素
   const { handleClearBlockFoucsState, handleBlockMouseDown } = useBlockDrag();
 
   return (

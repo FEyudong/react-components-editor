@@ -104,7 +104,6 @@ export default () => {
     mousedown(e);
   };
   return {
-    mousedown,
     handleBlockMouseDown,
     handleClearBlockFoucsState,
   };
