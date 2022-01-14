@@ -61,6 +61,7 @@
         console.log('dragenter')
     }, false);
 
+    // 在放置目标上持续拖动时触发
     document.addEventListener("dragover", function( event ) {
         // 阻止默认动作以启用drop
         event.preventDefault();
@@ -73,9 +74,9 @@
         event.preventDefault();
         if ( event.target.className == "dropzone" ) {
             event.target.style.background = "";
-            // 原来位置删除拖拽dom
+            // 原来位置拖动子元素删除
             dragged.parentNode.removeChild( dragged );
-            // 新位置添加拖拽dom
+            // 新位置添加拖动子元素
             event.target.appendChild( dragged );
         }
         console.log('drop')

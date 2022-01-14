@@ -12,6 +12,7 @@ function Parts(props:Props){
         <Space direction="vertical">
         {compConfig.compList.map((comp)=><Card 
             className="part-item"
+            bordered
             key={comp.key}
             title={comp.label}
             draggable

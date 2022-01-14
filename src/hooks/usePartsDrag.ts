@@ -21,7 +21,7 @@
         if (!curDragComp) {
           return;
         }
-        e.preventDefault();
+        e.preventDefault();// 阻止下默认行为，以便能让后续的drop事件正常触发
       };
 
       // 拖拽目标离开画布
@@ -32,7 +32,7 @@
         e.dataTransfer.dropEffect = "none";//还原指针图标
       };
 
-      // 在画布上松手时，往画布上添加一个物料
+      // 在画布上松手时，往画布上添加一个组件块
       const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
         if (!curDragComp) {
           return;
